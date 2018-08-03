@@ -16,35 +16,32 @@ if(repeatedLetter(event.key)){
     alert("You pick that one already! Choose again.")
     return;
 }
-console.log(compGuess);
 if (compGuess === event.key ){
-    resetList();
-    resetCompGuess();
-    resetMessage();
-    numberOfWins++;
-    numberOfGuesses = 9;
+    guessesSoFar.push(event.key); 
     updateScreen();
-    
-     alert("How did you know?!!")
+    newGame();
 }
 else if(numberOfGuesses === 1){
     numberOfGuesses= numberOfGuesses -1;
     updateScreen();
-    resetCompGuess();
     numberOfLossess++;
     numberOfGuesses = 9;
+    resetMessage("You are bad at this." + " My letter was "  + "<h1>" + compGuess + "</h1>"  + " What is my new Letter?");
     resetList();
-    updateScreen();
-    alert("You are bad at this." + " My letter was " + "'" + compGuess +"'");
+    resetCompGuess();
+    setTimeout(function(){updateScreen();}, 1200);
+   
 }
 else{
+    console.log(compGuess);
     numberOfGuesses= numberOfGuesses-1;
     guessesSoFar.push(event.key);
     updateScreen();
-    guessNotCorrect();
+    resetMessage('Your Guess Was Not Correct');
 }
-    
+
 }
+
 function updateScreen(){
  document.getElementById("numberOfWins").textContent = "Wins: " + numberOfWins;
  document.getElementById("numberofGuessLeft").textContent = "Guess Left: " + numberOfGuesses;
@@ -68,9 +65,18 @@ function gameOver(){
 function resetCompGuess(){
     compGuess = alphabet[Math.floor(Math.random()*alphabet.length)];
 }
-function guessNotCorrect(){
-    document.getElementById("guessNotCorrect").textContent = "Your Guess Was Not Correct";
+function resetMessage(message){
+    document.getElementById("guessNotCorrect").innerHTML = message;
 }
-function resetMessage(){
-    document.getElementById("guessNotCorrect").textContent = " ";
-}
+
+function newGame(){
+   
+        resetList();
+        numberOfWins++;
+        numberOfGuesses = 9;
+        resetCompGuess();
+        updateScreen();
+        resetMessage("Congratulations: What is my new Letter?")
+       
+    
+};

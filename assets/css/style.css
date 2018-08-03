@@ -1,7 +1,3 @@
-@font-face {
-    font-family: myFirstFont;
-    src: local("assets/css/halo3.regular");
-}
 .myGameFont{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 48px;
