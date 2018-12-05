@@ -4,7 +4,7 @@
 
 Try to guess the computer random generated  letter. Do not guess incorrectly 9 times or you will lose the game.
 
-## Tech used
+## Tech use
 
 In this build we utilize event listener such as onkeypress to read the user input. We then compare it to the random letter. We capitalize on vanilla javascript to target and update scores, guess, wins and loses. We included validation so that reapeated letter do not count as incorrect guesses. 
 
