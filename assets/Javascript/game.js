@@ -13,7 +13,7 @@ if(!goodPick(event.key)){
     return;
 }
 if(repeatedLetter(event.key)){
-    alert("You pick that one already! Choose again.")
+    alert("You picked that one already! Choose again.")
     return;
 }
 if (compGuess === event.key ){
@@ -29,11 +29,11 @@ else if(numberOfGuesses === 1){
     resetMessage("You are bad at this." + " My letter was "  + "<h1>" + compGuess + "</h1>"  + " What is my new Letter?");
     resetList();
     resetCompGuess();
-    setTimeout(function(){updateScreen();}, 1200);
+    setTimeout(function(){updateScreen();}, 1100);
    
 }
 else{
-    console.log(compGuess);
+    
     numberOfGuesses= numberOfGuesses-1;
     guessesSoFar.push(event.key);
     updateScreen();
