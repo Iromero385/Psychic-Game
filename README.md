@@ -15,4 +15,4 @@ In this build we utilize event listener such as onkeypress to read the user inpu
 * Replace alers with modal or a div on the screen.
 
 <h2> Examples</h2>
-![Front-end](./assets/images/front-end.png)
+<img src="./assets/images/front-end.png">
