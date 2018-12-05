@@ -1,4 +1,4 @@
-#Psychic Game 
+<h1> Psychic Game </h1>
 
 <h2> Instructions </h2>
 
