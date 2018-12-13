@@ -1,12 +1,15 @@
-<h1> Psychic Game </h1>
+# Psychic Game
 
-<h2> Instructions </h2>
+## Introduction
 
+This project was build to practice keypress events. We utilize vanilla javascript for events and dynamic manipulations of html elements.
+
+# Instructions
 Try to guess the computer random generated  letter. Do not guess incorrectly 9 times or you will lose the game.
 
-<h2>  Tech use </h2>
+## Tech used
 
-In this build we utilize event listener such as onkeypress to read the user input. We then compare it to the random letter. We capitalize on vanilla javascript to target and update scores, guess, wins and loses. We included validation so that reapeated letter do not count as incorrect guesses. 
+In this build we utilize event listener such as onkeypress to read the user input. We capitalize on vanilla *javascript* to target and update scores, guess, wins and loses. We included validation so that reapeated letter do not count as incorrect guesses. 
 
 <h2> Future development</h2>
 
